@@ -18,7 +18,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
-      <div className="card lg:card-side bg-base-100 shadow-xl">
+      <div className="mt-5 card lg:card-side bg-base-100 shadow-xl">
         <figure>
           <Image
             src={post.meta.thumb}
