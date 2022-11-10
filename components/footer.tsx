@@ -26,24 +26,24 @@ export default function Footer() {
           <span className="footer-title">Social</span>
           <div className="grid grid-flow-col gap-4">
             <Link href={"https://www.google.com"}>
-              <button>
+              <div className="btn btn-sm btn-circle">
                 <FaGithub size={"2em"} />
-              </button>
+              </div>
             </Link>
             <Link href={"https://www.google.com"}>
-              <button>
+              <div className="btn btn-sm btn-circle">
                 <FaTwitterSquare size={"2em"} />
-              </button>
+              </div>
             </Link>
             <Link href={"https://www.google.com"}>
-              <button>
+              <div className="btn btn-sm btn-circle">
                 <FaLinkedin size={"2em"} />
-              </button>
+              </div>
             </Link>
             <Link href={"https://www.google.com"}>
-              <button>
+              <div className="btn btn-sm btn-circle">
                 <FaYoutube size={"2em"} />
-              </button>
+              </div>
             </Link>
           </div>
         </div>

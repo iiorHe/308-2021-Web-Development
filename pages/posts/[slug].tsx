@@ -5,6 +5,12 @@ import Head from "next/head";
 import { MDXRemote, MDXRemoteSerializeResult } from "next-mdx-remote";
 import { serialize } from "next-mdx-remote/serialize";
 import { getPostFromSlug, getSlugs, PostMeta } from "../../utils/api";
+import {
+  FaLink,
+  FaTwitterSquare,
+  FaClipboardList,
+  FaTelegramPlane,
+} from "react-icons/fa";
 import Comments from "../../components/comments";
 
 interface MDXPost {
@@ -18,6 +24,38 @@ export default function PostPage({ post }: { post: MDXPost }) {
       <Head>
         <title>{post.meta.title}</title>
       </Head>
+      <input type="checkbox" id="sharemodal" className="modal-toggle" />
+      <label htmlFor="sharemodal" className="modal cursor-pointer">
+        <label className="modal-box relative" htmlFor="">
+          <h3 className="text-lg font-bold">Share post</h3>
+          <ul className="menu">
+            <li>
+              <Link href={"https://www.twitter.com/"}>
+                <FaClipboardList size={"2em"} />
+                Copy to Clipboard
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.twitter.com/"}>
+                <FaTwitterSquare size={"2em"} />
+                Tweet
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.twitter.com/"}>
+                <FaTwitterSquare size={"2em"} />
+                Direct message
+              </Link>
+            </li>
+            <li>
+              <Link href={"https://www.twitter.com/"}>
+                <FaTelegramPlane size={"2em"} />
+                Telegram
+              </Link>
+            </li>
+          </ul>
+        </label>
+      </label>
       <div className="mt-5 card lg:card-side bg-base-100 shadow-xl">
         <figure>
           <Image
@@ -30,7 +68,8 @@ export default function PostPage({ post }: { post: MDXPost }) {
         <div className="card-body">
           <h2 className="card-title">{post.meta.title}</h2>
           <p className="prose">{post.meta.excerpt}</p>
-          <div className="card-actions justify-end">
+
+          <div className="card-actions justify-start">
             {post.meta.tags.map((tag) => (
               <Link
                 className="badge badge-info"
@@ -41,6 +80,11 @@ export default function PostPage({ post }: { post: MDXPost }) {
               </Link>
             ))}
           </div>
+        </div>
+        <div className="self-end pb-2 pr-2">
+          <label htmlFor="sharemodal" className="btn btn-circle">
+            <FaLink size={"2em"} />
+          </label>
         </div>
       </div>
       <div className="my-5 mx-5 prose-base">
