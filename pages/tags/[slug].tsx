@@ -13,9 +13,13 @@ export default function TagPage({
   return (
     <div>
       <Head>
-        <title>Tag: {slug}</title>
+        <title>Results for tag: {slug}</title>
       </Head>
-      <h1 className="flex flex-cols items-center">Tag: {slug}</h1>
+      <div className="card-body">
+        <h1 className="card-title flex flex-col items-center">
+          <b>Tag: {slug}</b>
+        </h1>
+      </div>
       <Articles posts={posts} />
     </div>
   );

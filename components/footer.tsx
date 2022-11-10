@@ -9,10 +9,18 @@ export default function Footer() {
       <footer className="footer mx-auto max-w-5xl grid-flow-col p-10 text-base-content">
         <div>
           <span className="footer-title">Navigation</span>
-          <a className="link link-hover">Home</a>
-          <a className="link link-hover">Portfolio</a>
-          <a className="link link-hover">Posts</a>
-          <a className="link link-hover">Contact</a>
+          <Link href={"/"} className="link link-hover">
+            Home
+          </Link>
+          <Link href={"/portfolio"} className="link link-hover">
+            Portfolio
+          </Link>
+          <Link href={"/posts"} className="link link-hover">
+            Blog
+          </Link>
+          <Link href={"/contact"} className="link link-hover">
+            Contact
+          </Link>
         </div>
         <div>
           <span className="footer-title">Social</span>

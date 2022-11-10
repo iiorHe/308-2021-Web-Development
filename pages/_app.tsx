@@ -6,7 +6,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen shadow-2xl mx-auto place-self-center max-w-5xl">
+      <div className="min-h-screen shadow-2xl mx-auto place-self-center max-w-7xl">
         <Component {...pageProps} />
       </div>
       <Footer />

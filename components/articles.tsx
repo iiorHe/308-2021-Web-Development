@@ -10,7 +10,7 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
           // className="border-2 border-gray-500 rounded-lg w-3/5"
           key={post.slug}
         >
-          <div className="card w-96 bg-base-100 shadow-xl">
+          <div className="card border border-primary mb-4 w-96 bg-base-100 shadow-xl">
             <figure>
               <Link href={`/posts/${post.slug}`}>
                 <Image
@@ -29,7 +29,7 @@ export default function Articles({ posts }: { posts: PostMeta[] }) {
               <div className="card-actions justify-end">
                 {post.tags.map((tag) => (
                   <Link
-                    className="badge badge-outline"
+                    className="badge badge-info"
                     key={tag}
                     href={`/tags/${tag}`}
                   >
