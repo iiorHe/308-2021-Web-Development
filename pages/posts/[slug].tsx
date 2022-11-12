@@ -1,4 +1,4 @@
-import type { GetStaticProps, GetStaticPaths } from "next";
+import type { GetServerSideProps } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
@@ -96,7 +96,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { slug } = params as { slug: string };
   const { content, meta } = getPostFromSlug(slug);
   const mdxSource = await serialize(content, {});
@@ -104,11 +104,11 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   return { props: { post: { source: mdxSource, meta } } };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const paths = getSlugs().map((slug) => ({ params: { slug } }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const paths = getSlugs().map((slug) => ({ params: { slug } }));
+//
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };

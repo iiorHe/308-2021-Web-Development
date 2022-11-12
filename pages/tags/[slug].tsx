@@ -1,4 +1,4 @@
-import type { GetStaticProps, GetStaticPaths } from "next";
+import type { GetServerSideProps } from "next";
 import Head from "next/head";
 import { getAllPosts, PostMeta } from "../../utils/api";
 import Articles from "../../components/articles";
@@ -27,7 +27,7 @@ export default function TagPage({
   );
 }
 
-export const getStaticProps: GetStaticProps = async ({ params }) => {
+export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   const { slug } = params as { slug: string };
   const posts = getAllPosts().filter((post) => post.meta.tags.includes(slug));
 
@@ -39,13 +39,13 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getAllPosts();
-  const tags = new Set(posts.map((post) => post.meta.tags).flat());
-  const paths = Array.from(tags).map((tag) => ({ params: { slug: tag } }));
-
-  return {
-    paths,
-    fallback: false,
-  };
-};
+// export const getStaticPaths: GetStaticPaths = async () => {
+//   const posts = getAllPosts();
+//   const tags = new Set(posts.map((post) => post.meta.tags).flat());
+//   const paths = Array.from(tags).map((tag) => ({ params: { slug: tag } }));
+//
+//   return {
+//     paths,
+//     fallback: false,
+//   };
+// };
