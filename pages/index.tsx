@@ -11,14 +11,14 @@ export default function Home() {
           <title>Heorhii Ozharenkov - Home</title>
         </Head>
         {/* Intro card */}
-        <div className="mx-30 p-5 border border-primary mt-10 rounded-xl">
-          <div className="float-right ">
+        <div className="mx-30 md:mx-44 p-5 border border-primary mt-10 rounded-xl">
+          <div className="avatar-group float-right ">
             <Image
               src={profilePic}
               height={200}
               width={200}
               alt=""
-              className="rounded-full border border-primary"
+              className="avatar rounded-full border border-primary"
             ></Image>
           </div>
           <p className="text-3xl font-bold mb-8">Howdy!</p>
@@ -27,14 +27,14 @@ export default function Home() {
             where I share my unsolicited thoughts and opinions on the internet.
           </p>
           <br />
-          <p>
+          <p className="text-lg">
             I'm a 4th year Software Engineering student from Ukraine, and a big
             computer graphics and software nerd. I dabble in 3D modelling,
             procedural textures, desktop applications and games!
           </p>
         </div>
       </div>
-      <div className="prose-base p-5 mx-30 mt-5">
+      <p className="mx-4 text-justify sm:mx-24 my-5 text-lg prose-base">
         If you're interested in looking at some of my work, you can do so{" "}
         <Link href={"/portfolio"} className="link link-primary">
           here
@@ -47,7 +47,7 @@ export default function Home() {
           here
         </Link>
         .
-      </div>
+      </p>
     </>
   );
 }

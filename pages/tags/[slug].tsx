@@ -15,8 +15,12 @@ export default function TagPage({
       <Head>
         <title>Results for tag: {slug}</title>
       </Head>
-      <div className="card-body">
-        <h1 className="card-title flex flex-col items-center">Tag: {slug}</h1>
+      <div className="flex flex-col items-center">
+        <div className="mt-4 w-auto items-center card border border-primary">
+          <div className="card-body p-4">
+            <p className="card-title">Results for tag: {slug}</p>
+          </div>
+        </div>
       </div>
       <Articles posts={posts} />
     </div>

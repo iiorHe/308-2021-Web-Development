@@ -4,8 +4,12 @@ import Articles from "../../components/articles";
 export default function Home({ posts }: { posts: PostMeta[] }) {
   return (
     <>
-      <div className="card-body">
-        <h1 className="card-title flex flex-col items-center">Articles</h1>
+      <div className="flex flex-col items-center">
+        <div className="mt-4 w-auto items-center card border border-primary">
+          <div className="card-body p-4">
+            <p className="card-title">Articles</p>
+          </div>
+        </div>
       </div>
       <Articles posts={posts} />
     </>

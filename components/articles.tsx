@@ -4,13 +4,13 @@ import type { PostMeta } from "../utils/api";
 
 export default function Articles({ posts }: { posts: PostMeta[] }) {
   return (
-    <ul className="flex flex-col items-center">
+    <ul className="flex flex-row flex-wrap justify-center">
       {posts.map((post) => (
         <li
-          // className="border-2 border-gray-500 rounded-lg w-3/5"
+          className="card border border-primary m-4 w-96 bg-base-100 shadow-xl"
           key={post.slug}
         >
-          <div className="card border border-primary mb-4 w-96 bg-base-100 shadow-xl">
+          <div className="card">
             <figure>
               <Link href={`/posts/${post.slug}`}>
                 <Image
