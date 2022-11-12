@@ -28,7 +28,7 @@ export default function Home() {
         For job offers, business inquiries, or miscellaneous questions, feel
         free to use the contact form below. You can also find me on various
         social platforms, if you need to get in touch as quickly as possible, or
-        if you're interested in following the content I post online.
+        if you&apos;re interested in following the content I post online.
       </p>
       <div className="flex p-4 w-auto flex-col md:flex-row">
         <div className="h-auto w-full card bg-base-300 rounded-box p-2">

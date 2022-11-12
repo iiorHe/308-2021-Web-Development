@@ -16,7 +16,7 @@ export default function Home({ posts }: { posts: PostMeta[] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const posts = getAllPosts()
     .slice(0, 9)
     .map((post) => post.meta);

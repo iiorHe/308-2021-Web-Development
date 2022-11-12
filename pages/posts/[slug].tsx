@@ -87,7 +87,7 @@ export default function PostPage({ post }: { post: MDXPost }) {
           </label>
         </div>
       </div>
-      <div className="my-5 mx-5 prose-base">
+      <div className="mt-5 mx-5 prose-base">
         {" "}
         <MDXRemote {...post.source} components={{ Image }} />
         <Comments />

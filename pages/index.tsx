@@ -23,19 +23,20 @@ export default function Home() {
           </div>
           <p className="text-3xl font-bold mb-8">Howdy!</p>
           <p className="text-xl">
-            I'm <b>Heorhii</b> and you've stumbled into my personal website,
-            where I share my unsolicited thoughts and opinions on the internet.
+            I&apos;m <b>Heorhii</b> and you&ve stumbled into my personal
+            website, where I share my unsolicited thoughts and opinions on the
+            internet.
           </p>
           <br />
           <p className="text-lg">
-            I'm a 4th year Software Engineering student from Ukraine, and a big
-            computer graphics and software nerd. I dabble in 3D modelling,
+            I&apos;m a 4th year Software Engineering student from Ukraine, and a
+            big computer graphics and software nerd. I dabble in 3D modelling,
             procedural textures, desktop applications and games!
           </p>
         </div>
       </div>
       <p className="mx-4 text-justify sm:mx-24 my-5 text-lg prose-base">
-        If you're interested in looking at some of my work, you can do so{" "}
+        If you&apos;re interested in looking at some of my work, you can do so{" "}
         <Link href={"/portfolio"} className="link link-primary">
           here
         </Link>
