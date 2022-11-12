@@ -23,7 +23,7 @@ export default function Home() {
           </div>
           <p className="text-3xl font-bold mb-8">Howdy!</p>
           <p className="text-xl">
-            I&apos;m <b>Heorhii</b> and you&ve stumbled into my personal
+            I&apos;m <b>Heorhii</b> and you&apos;ve stumbled into my personal
             website, where I share my unsolicited thoughts and opinions on the
             internet.
           </p>
