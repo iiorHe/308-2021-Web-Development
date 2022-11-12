@@ -34,7 +34,7 @@ export default function Home() {
           </p>
         </div>
       </div>
-      <div className="prose-base mx-30 mt-5">
+      <div className="prose-base p-5 mx-30 mt-5">
         If you're interested in looking at some of my work, you can do so{" "}
         <Link href={"/portfolio"} className="link link-primary">
           here
